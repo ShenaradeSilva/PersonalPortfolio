@@ -1,3 +1,3 @@
-export const Hero = () => {
-    return <></>;
+export const Projects = () => {
+    return <></>
 }
