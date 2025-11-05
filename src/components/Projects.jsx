@@ -15,89 +15,91 @@ const staggerContainer = {
 }
 
 export const Projects = () => {
-    return <motion.section
-        id="projects"
-        className="projects"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-    >
-        <motion.h2
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="animate"
+    return (
+        <motion.section
+            id="projects"
+            className="projects"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
         >
-            My Projects
-        </motion.h2>
-
-        <motion.div
-            className="project-grid"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-        >
-            {/* project 1 */}
-            <motion.div
-                className="project-card"
+            <motion.h2
                 variants={fadeInUp}
-                whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
             >
-                <motion.div
-                    className="project-image"
-                    style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                />
-                <h3>Project Name</h3>
-                <p>
-                    Description
-                </p>
-                <div className="project-tech">
-                    <span>Tech</span>
-                </div>
-            </motion.div>
+                My Projects
+            </motion.h2>
 
-            {/* project 2 */}
             <motion.div
-                className="project-card"
-                variants={fadeInUp}
-                whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                className="project-grid"
+                variants={staggerContainer}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
             >
+                {/* project 1 */}
                 <motion.div
-                    className="project-image"
-                    style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                />
-                <h3>Project Name</h3>
-                <p>
-                    Description
-                </p>
-                <div className="project-tech">
-                    <span>Tech</span>
-                </div>
-            </motion.div>
+                    className="project-card"
+                    variants={fadeInUp}
+                    whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                >
+                    <motion.div
+                        className="project-image"
+                        style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    />
+                    <h3>Project Name</h3>
+                    <p>
+                        Description
+                    </p>
+                    <div className="project-tech">
+                        <span>Tech</span>
+                    </div>
+                </motion.div>
 
-            {/* project 3 */}
-            <motion.div
-                className="project-card"
-                variants={fadeInUp}
-                whileHover={{ y: -10, transition: { duration: 0.2 } }}
-            >
+                {/* project 2 */}
                 <motion.div
-                    className="project-image"
-                    style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                />
-                <h3>Project Name</h3>
-                <p>
-                    Description
-                </p>
-                <div className="project-tech">
-                    <span>Tech</span>
-                </div>
+                    className="project-card"
+                    variants={fadeInUp}
+                    whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                >
+                    <motion.div
+                        className="project-image"
+                        style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    />
+                    <h3>Project Name</h3>
+                    <p>
+                        Description
+                    </p>
+                    <div className="project-tech">
+                        <span>Tech</span>
+                    </div>
+                </motion.div>
+
+                {/* project 3 */}
+                <motion.div
+                    className="project-card"
+                    variants={fadeInUp}
+                    whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                >
+                    <motion.div
+                        className="project-image"
+                        style={{ backgroundImage: "url('/projects/image_file_name.png')" }}
+                        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    />
+                    <h3>Project Name</h3>
+                    <p>
+                        Description
+                    </p>
+                    <div className="project-tech">
+                        <span>Tech</span>
+                    </div>
+                </motion.div>
             </motion.div>
-        </motion.div>
-    </motion.section>
+        </motion.section>
+    );
 }
